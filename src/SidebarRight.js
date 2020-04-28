@@ -9,13 +9,13 @@ export default function SidebarRight() {
         className="card-img-top"
       />
       <div className="side-body">
-        <h5 className="side-title">Card title</h5>
+        <h5 className="side-title">From the Space</h5>
         <p className="side-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Breaking news from other galactics go here, you can push the button to
+          see all the details, good luck!
         </p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
+        <a href="#" className="btn btn-info">
+          Read news
         </a>
       </div>
     </div>
