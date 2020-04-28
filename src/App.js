@@ -6,6 +6,8 @@ import SidebarRight from "./SidebarRight.js";
 import astronaut from "./images/astronaut.jpg";
 import mars from "./images/mars.jpg";
 import radioactive from "./images/radioactive.jpg";
+import { ReactComponent as Home } from "./home.svg";
+import Navbar from "./Navbar";
 
 import "./App.css";
 
@@ -15,7 +17,7 @@ const posts = [
     lead:
       "Maybe some of you wonder where to go on vacation. The best destinetion for this summer is definitely Mars. If you are afraid of high travel costs, I have good news for you!",
     date: "Apr, 12. 2020",
-    image: "images/mars.jpg",
+    image: "./images/mars.jpg",
   },
 
   {
@@ -23,7 +25,7 @@ const posts = [
     lead:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     date: "Apr, 20. 2020",
-    image: "images/radioactive.jpg",
+    image: "./images/radioactive.jpg",
   },
 
   {
@@ -31,14 +33,23 @@ const posts = [
     lead:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     date: "Apr, 26. 2020",
-    image: "images/astronaut.jpg",
+    image: "./images/astronaut.jpg",
   },
 ];
+
 function App() {
   return (
     <div className="App">
       <div className="container-fluid">
-        <Header />
+        <div className="head">
+          <div>
+            <Header />
+          </div>
+          <div className="navi">
+            <Home />
+            <Navbar />
+          </div>
+        </div>
         <div className="row">
           <div className="col-3">
             <SidebarLeft />

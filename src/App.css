@@ -1,1 +1,11 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
+.navi {
+  display: flex;
+  justify-content: space-between;
+}
