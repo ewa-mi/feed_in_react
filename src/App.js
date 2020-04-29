@@ -31,7 +31,7 @@ const posts = [
   {
     title: "Time traveling affordable for everyone",
     lead:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
     date: "Apr, 26. 2020",
     image: astronaut,
   },

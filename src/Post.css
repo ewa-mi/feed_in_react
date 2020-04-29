@@ -39,3 +39,7 @@
   letter-spacing: 0.5px;
   transition: all 0.4s ease 0s;
 }
+
+.likeNum {
+  margin-right: 3px;
+}
