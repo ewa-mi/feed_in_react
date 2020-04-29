@@ -17,23 +17,23 @@ const posts = [
     lead:
       "Maybe some of you wonder where to go on vacation. The best destinetion for this summer is definitely Mars. If you are afraid of high travel costs, I have good news for you!",
     date: "Apr, 12. 2020",
-    image: "./images/mars.jpg",
+    image: mars,
   },
 
   {
     title: "Radioactive objects on the Earth",
     lead:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
     date: "Apr, 20. 2020",
-    image: "./images/radioactive.jpg",
+    image: radioactive,
   },
 
   {
     title: "Time traveling affordable for everyone",
     lead:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     date: "Apr, 26. 2020",
-    image: "./images/astronaut.jpg",
+    image: astronaut,
   },
 ];
 
