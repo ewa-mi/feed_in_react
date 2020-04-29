@@ -5,4 +5,11 @@ body {
   padding: 30px;
   font-family: "Roboto", "Oxygen", "Helvetica Neue", sans-serif;
   background-color: rgb(22, 22, 22);
+  max-width: 1600px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    margin: 0 auto;
+  }
 }
