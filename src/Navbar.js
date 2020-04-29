@@ -19,7 +19,7 @@ export default function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item active">
             <a className="nav-link" href="#">
-              Join <span class="sr-only">(current)</span>
+              Join <span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="nav-item">
@@ -28,12 +28,12 @@ export default function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a class="nav-link" href="#">
+            <a className="nav-link" href="#">
               Messages{" "}
             </a>
           </li>
           <li className="nav-item">
-            <a class="nav-link" href="#">
+            <a className="nav-link" href="#">
               Search
             </a>
           </li>

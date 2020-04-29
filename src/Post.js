@@ -1,7 +1,4 @@
 import "./Post.css";
-import astronaut from "./images/astronaut.jpg";
-import mars from "./images/mars.jpg";
-import radioactive from "./images/radioactive.jpg";
 import React, { useState } from "react";
 
 export default function Post(props) {

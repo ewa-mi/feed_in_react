@@ -6,6 +6,8 @@ export default function SidebarRight() {
     <div className="side">
       <img
         src="https://static.vecteezy.com/system/resources/thumbnails/000/190/852/original/Flat_Galaxi_Vector_Background-01.jpg"
+        alt="galactics"
+        title="news from galactics"
         className="card-img-top"
       />
       <div className="side-body">
