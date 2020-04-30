@@ -25,14 +25,14 @@ export default function SidebarLeft() {
       <div className="card-body pb-0">
         <h5 className="card-title">NASA daily image</h5>
         <h6 className="card-subtitle mb-3">{data.date}</h6>
-        <p>
+        <div>
           {data.title}
           <br />
           <br />
           <div>
             <img className="card__image" src={data.hdurl} />
           </div>
-        </p>
+        </div>
       </div>
     </div>
   );

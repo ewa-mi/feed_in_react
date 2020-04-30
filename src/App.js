@@ -13,6 +13,7 @@ import "./App.css";
 
 const posts = [
   {
+    id: 1,
     title: "How expensive is flight on Mars?",
     lead:
       "Maybe some of you wonder where to go on vacation. The best destinetion for this summer is definitely Mars. If you are afraid of high travel costs, I have good news for you!",
@@ -21,6 +22,7 @@ const posts = [
   },
 
   {
+    id: 2,
     title: "Radioactive objects on the Earth",
     lead:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
@@ -29,6 +31,7 @@ const posts = [
   },
 
   {
+    id: 3,
     title: "Time traveling affordable for everyone",
     lead:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
@@ -56,14 +59,13 @@ function App() {
           </div>
           <div className="col-6">
             {posts.map((post) => (
-              <div>
-                <Post
-                  image={post.image}
-                  title={post.title}
-                  lead={post.lead}
-                  date={post.date}
-                />
-              </div>
+              <Post
+                key={post.id}
+                image={post.image}
+                title={post.title}
+                lead={post.lead}
+                date={post.date}
+              />
             ))}
           </div>
           <div className="col-3">
