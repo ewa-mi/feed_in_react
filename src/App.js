@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "./Post.js";
+import PostList from "./PostList.js";
 import Header from "./Header.js";
 import SidebarLeft from "./SidebarLeft.js";
 import SidebarRight from "./SidebarRight.js";
@@ -58,15 +58,7 @@ function App() {
             <SidebarLeft />
           </div>
           <div className="col-6">
-            {posts.map((post) => (
-              <Post
-                key={post.id}
-                image={post.image}
-                title={post.title}
-                lead={post.lead}
-                date={post.date}
-              />
-            ))}
+            <PostList posts={posts} />
           </div>
           <div className="col-3">
             <SidebarRight />
