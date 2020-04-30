@@ -1,14 +1,7 @@
+import React from "react";
 import "./Post.css";
-import React, { useState } from "react";
 
 export default function Post(props) {
-  const [numLikes, set_numLikes] = useState(0);
-
-  const increment = () => {
-    console.log("Yes, liked!");
-    set_numLikes(numLikes + 1);
-  };
-
   return (
     <div className="card mb-3 postLook">
       <div className="row no-gutters">
@@ -25,8 +18,11 @@ export default function Post(props) {
               </p>
               <div className="buttonSection">
                 <button className="moreButton">Read more</button>
-                <button className="like" onClick={increment}>
-                  <b className="likeNum">{numLikes}</b>
+                <button
+                  className="like"
+                  onClick={() => props.changeLikes(props.id, 1)}
+                >
+                  <b className="likeNum">{props.likes}</b>
                   Like
                 </button>
               </div>

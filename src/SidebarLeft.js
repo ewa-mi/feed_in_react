@@ -6,19 +6,19 @@ export default function SidebarLeft() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log("Use Effect!");
+    // console.log("Use Effect!");
     const fetchData = async () => {
       const response = await axios.get(
         "https://api.nasa.gov/planetary/apod?api_key=esGhqpCdz7yQx2f3DAwcWxf412oKlvvY8cdL3MAr"
       );
-      console.log("axios response", response.data);
+      // console.log("axios response", response.data);
       setData(response.data);
     };
 
     fetchData();
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="card shadow-sm mb-4">
