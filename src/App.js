@@ -35,7 +35,7 @@ function App() {
 
     {
       id: 3,
-      title: "Time traveling affordable for everyone",
+      title: "Alert! Time traveling affordable for everyone",
       lead:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Sed do eiusmod tempor incididunt",
       date: "2020-03-21",
@@ -43,13 +43,23 @@ function App() {
       likes: 0,
     },
   ]);
+  const [filterBy, setFilterBy] = useState("by date");
 
   const postsArrayCopy = [...posts];
 
-  const sortedPosts = postsArrayCopy.sort(function (a, b) {
-    return b.likes - a.likes;
-  });
+  let sortedPosts;
 
+  if (filterBy === "by date") {
+    sortedPosts = posts;
+  } else if (filterBy === "title") {
+    sortedPosts = postsArrayCopy.sort(function (a, b) {
+      return a.title.localeCompare(b.title);
+    });
+  } else if (filterBy === "likes") {
+    sortedPosts = postsArrayCopy.sort(function (a, b) {
+      return b.likes - a.likes;
+    });
+  }
   function changeLikes(id, changeBy) {
     const updatedPosts = posts.map((post) => {
       if (post.id === id) {
@@ -65,7 +75,6 @@ function App() {
 
       return post;
     });
-
     setPosts(updatedPosts);
   }
 
@@ -86,10 +95,13 @@ function App() {
             <SidebarLeft />
           </div>
           <div className="col-6">
-            <button className="filter" onClick={() => setPosts(sortedPosts)}>
-              Filter by likes
-            </button>
-            {posts.map((post) => (
+            <label className="filter">FILTER</label>
+            <select onChange={(event) => setFilterBy(event.target.value)}>
+              <option value="no filter">by date</option>
+              <option value="title">alphabetically</option>
+              <option value="likes">by likes</option>
+            </select>
+            {sortedPosts.map((post) => (
               <Post
                 key={post.id}
                 id={post.id}
