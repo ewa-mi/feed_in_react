@@ -8,13 +8,14 @@ import mars from "./images/mars.jpg";
 import radioactive from "./images/radioactive.jpg";
 import { ReactComponent as Home } from "./home.svg";
 import Navbar from "./Navbar";
+import AddPostForm from "./AddPostForm";
 
 import "./App.css";
 
 function App() {
   const [posts, setPosts] = useState([
     {
-      id: 1,
+      id: 3,
       title: "How expensive is flight on Mars?",
       lead:
         "Maybe some of you wonder where to go on vacation. The best destinetion for this summer is definitely Mars. If you are afraid of high travel costs, I have good news for you! The prices are fair enough.",
@@ -34,7 +35,7 @@ function App() {
     },
 
     {
-      id: 3,
+      id: 1,
       title: "Alert! Time traveling affordable for everyone",
       lead:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Sed do eiusmod tempor incididunt",
@@ -78,6 +79,20 @@ function App() {
     setPosts(updatedPosts);
   }
 
+  function addPost(title, lead, date, image) {
+    const newPost = {
+      id: posts.length + 1,
+      title: title,
+      lead: lead,
+      date: date,
+      image: image,
+      likes: 0,
+    };
+
+    const updatedPosts = [...posts, newPost];
+    setPosts(updatedPosts);
+  }
+
   return (
     <div className="App">
       <div className="container-fluid">
@@ -95,12 +110,13 @@ function App() {
             <SidebarLeft />
           </div>
           <div className="col-6">
-            <label className="filter">FILTER</label>
+            <AddPostForm addPost={addPost} />
+            <label className="filter">FILTER POSTS</label>
             <select onChange={(event) => setFilterBy(event.target.value)}>
               <option value="no filter">by date</option>
               <option value="title">alphabetically</option>
               <option value="likes">by likes</option>
-            </select>
+            </select>{" "}
             {sortedPosts.map((post) => (
               <Post
                 key={post.id}
