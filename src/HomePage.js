@@ -36,6 +36,7 @@ function HomePage({ posts, setPosts }) {
           lead: post.lead,
           date: post.date,
           image: post.image,
+          full: post.full,
           likes: post.likes + changeBy,
         };
       }
