@@ -9,7 +9,7 @@
   padding: 10px;
 }
 
-.card__image {
+.postImg {
   max-width: 700px;
 }
 
@@ -18,7 +18,7 @@
   justify-content: center;
 }
 
-.card-body {
+.postBody {
   padding: 50px;
   margin-bottom: 80px;
 }
