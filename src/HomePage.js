@@ -3,47 +3,13 @@ import Post from "./Post.js";
 import Header from "./Header.js";
 import SidebarLeft from "./SidebarLeft.js";
 import SidebarRight from "./SidebarRight.js";
-import astronaut from "./images/astronaut.jpg";
-import mars from "./images/mars.jpg";
-import radioactive from "./images/radioactive.jpg";
+
 import { ReactComponent as Home } from "./home.svg";
 import Navbar from "./Navbar";
 import AddPostForm from "./AddPostForm";
-
 import "./HomePage.css";
 
-function HomePage() {
-  const [posts, setPosts] = useState([
-    {
-      id: 3,
-      title: "How expensive is flight on Mars?",
-      lead:
-        "Maybe some of you wonder where to go on vacation. The best destinetion for this summer is definitely Mars. If you are afraid of high travel costs, I have good news for you! The prices are fair enough.",
-      date: "2020-04-28",
-      image: mars,
-      likes: 0,
-    },
-
-    {
-      id: 2,
-      title: "Radioactive objects on the Earth",
-      lead:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Et dolor sit amet, consectetur.",
-      date: "2020-04-15",
-      image: radioactive,
-      likes: 0,
-    },
-
-    {
-      id: 1,
-      title: "Alert! Time traveling affordable for everyone",
-      lead:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Sed do eiusmod tempor incididunt",
-      date: "2020-03-21",
-      image: astronaut,
-      likes: 0,
-    },
-  ]);
+function HomePage({ posts, setPosts }) {
   const [filterBy, setFilterBy] = useState("by date");
 
   const postsArrayCopy = [...posts];

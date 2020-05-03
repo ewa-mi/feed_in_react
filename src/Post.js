@@ -1,5 +1,6 @@
 import React from "react";
 import "./Post.css";
+import { Link } from "react-router-dom";
 
 export default function Post(props) {
   return (
@@ -17,7 +18,9 @@ export default function Post(props) {
                 <small className="text-muted">{props.date}</small>
               </p>
               <div className="buttonSection">
-                <button className="moreButton">Read more</button>
+                <Link className="moreButton" to={`/postPage/${props.id}`}>
+                  Read more
+                </Link>
                 <button
                   className="like"
                   onClick={() => props.changeLikes(props.id, 1)}
