@@ -31,7 +31,6 @@ export default function SidebarLeft() {
             {mediaType === "video" ? (
               <iframe
                 src={data.url}
-                frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
